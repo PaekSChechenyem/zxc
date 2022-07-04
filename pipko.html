@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython_stdlib.js">
+    </script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="h.css">
+    <title>Вонючая смэрть</title>
+</head>
+<body onload="brython()" background="ывы.png" width="100%" height="100%">
+    <form action="">
+        <input placeholder='Кто чувырла?' class="a1" type="text">
+    </form>
+    <button class="a2">Ебать!</button>
+    <script type="text/python">
+        from browser import document
+        def save_txt(text):
+            a=open('aba.txt', 'w')
+            a.write(text)
+            a.close()
+        for button in document.select(class='.a1'):
+            button.bind("click", save_txt('Гавнаа'))
+    </script>
+</body>
+</html>
